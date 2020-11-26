@@ -17,13 +17,11 @@ if __name__ == '__main__':
             continue
         while page_stack.size() != 0:
             top = page_stack.pop()
-            if top != p:
+            if top != p and not page_stack.is_empty():
                 tmp_stack.push(top)
             else:
-                # TODO 未淘汰旧页
                 break
         while tmp_stack.size() != 0:
-            top = tmp_stack.pop()
-            page_stack.push(top)
+            page_stack.push(tmp_stack.pop())
         page_stack.push(p)
         print("Current stack is:", page_stack.items)
