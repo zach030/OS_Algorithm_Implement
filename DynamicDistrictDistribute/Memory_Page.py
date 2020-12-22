@@ -40,5 +40,6 @@ class Memory:
                 has_up = 1
 
 
+
 memory = Memory(100)
 page_list = [Page(10), Page(15), Page(20), Page(8), Page(40), Page(25)]
